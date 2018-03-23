@@ -12,7 +12,7 @@ resource "digitalocean_droplet" "manager" {
   image = "ubuntu-16-04-x64"
   name = "manager"
   region = "nyc1"
-  size = "16gb"
+  size = "4gb"
   ssh_keys = [18911138]
   connection {
       user = "root"
