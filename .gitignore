@@ -1,1 +1,6 @@
 .idea/
+docker-compose.yml
+infrastructure/.terraform.tfstate.lock.info
+infrastructure/.terraform/
+infrastructure/terraform.tfstate
+
