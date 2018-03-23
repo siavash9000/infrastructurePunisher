@@ -1,12 +1,14 @@
 version: "3"
 services:
+
   locust-master:
     image: nukapi/locust
     ports:
       - "8089:8089"
     command: "locust -f simple_locust.py --host=https://www.example.com"
+
   locust-worker:
     image: nukapi/locust
     command: "locust -f simple_locust.py --host=https://www.example.com --master-host=locust-master"
     deploy:
-      mode: global
+      replicas: 20
