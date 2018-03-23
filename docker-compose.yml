@@ -5,10 +5,10 @@ services:
     image: nukapi/infrastructurepunisher
     ports:
       - "8089:8089"
-    command: "locust -f simple_locust.py --host=https://www.example.com"
+    command: "locust -f locust.py --host=https://www.example.com"
 
   locust-worker:
     image: nukapi/infrastructurepunisher
-    command: "locust -f simple_locust.py --host=https://www.example.com --master-host=locust-master"
+    command: "locust -f locust.py --host=https://www.example.com --master-host=locust-master"
     deploy:
       replicas: 20
